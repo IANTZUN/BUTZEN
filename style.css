@@ -95,17 +95,19 @@ body.modal-open{overflow:hidden}
 }
 
 .collection-next {
-  position: absolute;
-  top: 94px;
-  right: var(--space);
+  display: block;
+  width: max-content;
 
+  margin: 28px auto 0;
   padding-bottom: 8px;
+
   border-bottom: 1px solid var(--line);
 
   color: var(--grey);
 
   font-size: 11px;
   letter-spacing: 2px;
+  text-align: center;
   text-transform: uppercase;
 
   transition: 0.2s;
@@ -114,13 +116,4 @@ body.modal-open{overflow:hidden}
 .collection-next:hover {
   color: var(--red);
   border-color: var(--red);
-}
-
-@media (max-width: 760px) {
-  .collection-next {
-    position: static;
-    display: inline-block;
-    align-self: flex-start;
-    margin-top: 22px;
-  }
 }
