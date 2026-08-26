@@ -87,3 +87,40 @@ body.modal-open{overflow:hidden}
   .product-image{height:48vh;min-height:300px}
   .product-info{align-items:center}
 }
+/* POSICIÓN DE COLLECTION Y ENLACE A OUR STORY */
+
+.collection {
+  justify-content: flex-start;
+  padding-top: 82px;
+}
+
+.collection-next {
+  position: absolute;
+  top: 94px;
+  right: var(--space);
+
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+
+  color: var(--grey);
+
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  transition: 0.2s;
+}
+
+.collection-next:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+@media (max-width: 760px) {
+  .collection-next {
+    position: static;
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 22px;
+  }
+}
