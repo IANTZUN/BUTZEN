@@ -113,6 +113,7 @@ footer {
   letter-spacing: 5px;
 
   transform: translateX(calc(-1 * var(--space) + 12px));
+  
 }
 
 /* Categorías centrales */
@@ -146,91 +147,128 @@ footer {
 /* ==========================================================
    ICONOS DE USUARIO Y CARRITO
 ========================================================== */
-
-/* Contenedor de los dos iconos */
+/* CONTENEDOR DE LOS DOS ICONOS */
 
 .nav-actions {
   position: absolute;
-  top: 50%;
-  right: 30px;
+  top:70%;
+  right: 32px;
 
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 30px;
+
+  height: 44px;
 
   transform: translateY(-50%);
 }
 
 
-/* MISMO DISEÑO PARA USUARIO Y CARRITO */
+/* FORMA EXTERIOR DE USUARIO Y CARRITO */
 
 .account-link,
 .cart-button {
   position: relative;
 
-  display: grid;
-  place-items: center;
+  flex: 0 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 50px;
-  height: 30px;
-  margin: 1px;
+  min-width: 50px;
+
+  height: 50px;
+  min-height: 50px;
+
+  margin: 0;
   padding: 0;
 
-  border: 1.8px solid transparent;
-  border-radius: 100%;
+  border: 1.5px solid transparent;
+  border-radius: 50%;
 
   background: transparent;
   color: #090909;
 
-  line-height: 1;
+  line-height: 0;
+
+  overflow: visible;
   cursor: pointer;
+
+  transform: none;
 
   transition:
     color 0.2s,
-    border-color 0.2s,
     background 0.2s,
+    border-color 0.2s,
     transform 0.2s;
 }
 
 
-/* MISMO TAMAÑO DE DIBUJO */
+/* DIBUJOS INTERIORES */
 
 .account-link svg,
 .cart-button svg {
+  display: block;
+
+  flex: 0 0 auto;
+
   width: 30px;
-  height: 55px;
+  height: 30px;
+
+  margin: 0;
+  padding: 0;
 
   fill: none;
   stroke: currentColor;
-  stroke-width: 2px;
+  stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
+
+  overflow: visible;
 }
 
 
-/* MISMO EFECTO AL PASAR EL RATÓN */
+/* EFECTO AL PASAR EL RATÓN */
 
 .account-link:hover,
 .cart-button:hover {
   border-color: var(--red);
-  background: transparent;
-  color: var(--red);
-  transform: none;
+
+  background: var(--black);
+  color: #060606;
+
+  transform: scale(1.1);
 }
 
 
-/* NÚMERO ROJO DEL CARRITO */
+/* EFECTO AL PULSAR */
+
+.account-link:active,
+.cart-button:active {
+  transform: scale(0.95);
+}
+
+
+/* CÍRCULO CON EL NÚMERO DEL CARRITO */
 
 .cart-count {
   position: absolute;
   top: -5px;
-  right: -15px;
+  right: -6px;
 
   display: grid;
   place-items: center;
 
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  min-width: 20px;
+
+  height: 20px;
+  min-height: 20px;
+
+  margin: 0;
   padding: 0;
 
   border: 2px solid #ffffff;
@@ -243,10 +281,9 @@ footer {
   font-size: 11px;
   font-weight: 900;
   line-height: 1;
+
+  pointer-events: none;
 }
-
-
-
 /* ==========================================================
    3. PANTALLA INICIAL
    Logo, título BUTZEN, eslogan y enlace CAPSULE
@@ -422,15 +459,13 @@ footer {
 /* Título CAPSULE */
 
 .collection > h2 {
-  color: var(--text);
-
-  font-size: clamp(38px, 5vw, 76px);
+  font-size: clamp(45px, 4vw, 120px);
+  line-height: 0.88;
   font-weight: 700;
-  line-height: 0.90;
-  letter-spacing: 4px;
-
-  transform: translate(-6px, 20px);
+  letter-spacing: 0.1em;
+  transform: translate(-12px, 0px)
 }
+
 
 /* Subtítulo FIRST DROP */
 
@@ -472,7 +507,7 @@ footer {
   position: relative;
 
   width: 100%;
-  height: clamp(210px, 30vh, 370px);
+  height: clamp(400px, 30vh, 370px);
 
   display: grid;
   place-items: center;
@@ -551,12 +586,12 @@ footer {
 
 .product h3 {
   margin-top: 0;
-transform: translate(130px, 1px);
+transform: translate(240px, 1px);
   font-size: clamp(15px, vw, 20px);
 }
 
 .product p {
-  margin-top: 20px;
+  margin-top: 30px;
 
   color: var(--grey);
 
@@ -569,7 +604,7 @@ transform: translate(130px, 1px);
 .buy-button {
   flex: 0 0 auto;
 
-  padding: 12px 14px;
+  padding: 15px 15px;
 
   border: 2px solid var(--text);
   border-radius: 0;
@@ -578,7 +613,7 @@ transform: translate(130px, 1px);
   color: var(--text);
 
   font: inherit;
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 1px;
 
   cursor: pointer;
@@ -601,7 +636,7 @@ transform: translate(0px, 10px);
   display: block;
 
   width: max-content;
-  margin: 28px auto 0;
+  margin: 80px auto 0;
   padding-bottom: 8px;
 
   border-bottom: 1px solid var(--line);
@@ -611,7 +646,7 @@ transform: translate(0px, 10px);
   font-size: 18px;
   letter-spacing: 2px;
   text-align: center;
-transform: translate(0px, 270px);
+transform: translate(0px, 120px);
   transition:
     color 0.2s,
     border-color 0.2s;
@@ -632,7 +667,7 @@ transform: translate(0px, 270px);
   width: min(920vw, 1000px);
   max-height: 920vh;
   padding: 30;
-transform: translate(80px, 200px);
+transform: translate(520px, 150px);
   border: 0;
 
   background: transparent;
@@ -883,8 +918,8 @@ body.modal-open {
 ========================================================== */
 
 .manifesto {
-  min-height: 100svh;
-  padding-block: 100px;
+    min-height: 100svh;
+  padding-block: 300px;
 
   display: flex;
   flex-direction: column;
@@ -900,18 +935,19 @@ body.modal-open {
   content: "BUTZEN";
 
   position: absolute;
-  right: -0.05em;
-  bottom: -0.2em;
+  right: 0.05em;
+  bottom: -0.05em;
 
-  color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 0, 0, 0.7);
 
-  font-size: min(27vw, 410px);
+  font-size: min(27vw, 350px);
   font-weight: 900;
-  letter-spacing: -0.1em;
+  letter-spacing: -0.07em;
 }
 
 .manifesto > p {
-  margin-bottom: 50px;
+  transform: translateY(-200px);
+  margin-bottom:50px;
 
   color: var(--red);
 
@@ -920,13 +956,14 @@ body.modal-open {
 }
 
 .manifesto h2 {
+  transform: translateY(-200px);
   position: relative;
   z-index: 1;
 
   font-size: clamp(75px, 17vw, 270px);
-  line-height: 0.72;
+  line-height: 0.7;
   font-weight: 900;
-  letter-spacing: -0.095em;
+  letter-spacing: -0.075em;
 }
 
 
@@ -935,79 +972,88 @@ body.modal-open {
 ========================================================== */
 
 .story {
-  padding-top: clamp(120px, 16vw, 240px);
-  padding-bottom: clamp(120px, 16vw, 240px);
-
-  border-bottom: 1px solid var(--line);
-
-  scroll-margin-top: 60px;
+  min-height: 100svh;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
+.story > .section-number {
+  margin-bottom: 10px;
 
+  color: var(--red);
+
+  font-size: 20px;
+  letter-spacing: 2px;
+}
 .story > h2 {
   font-size: clamp(45px, 4vw, 120px);
   line-height: 0.88;
   font-weight: 700;
   letter-spacing: 0.1em;
+  transform: translate(-12px, 0px)
 }
 
 .story-text {
-  max-width: 850px;
+  max-width: 1200px;
   margin-left: auto;
 
-  font-size: clamp(22px, 3vw, 50px);
+  font-size: clamp(16px, 4vw, 50px);
   font-weight: 900;
   line-height: 1.18;
-  letter-spacing: -1.5px;
+  text-align: justify;
+  letter-spacing: 2px;
+  transform: translateX(-00px);
 }
 
 .story h2 + .story-text {
-  margin-top: clamp(70px, 10vw, 150px);
+  margin-top: clamp(12px, 5vw, 500px);
 }
 
 .story-text + .story-text {
-  margin-top: 1.15em;
+  margin-top: 3.5em;
   color: var(--red);
 }
 
 
 /* ==========================================================
-   10. PANTALLA CONTACT
+   10. PANTALLA GALLERY
 ========================================================== */
 
 .contact {
-  min-height: 78svh;
-  padding-block: clamp(110px, 14vw, 200px);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  scroll-margin-top: 60px;
+  min-height: 150svh;
+  padding-block: 80px;
 }
+.contact > .section-number {
+  margin-bottom: 10px;
 
+  color: var(--red);
+
+  font-size: 20px;
+  letter-spacing: 2px;
+}
 .contact > h2 {
   font-size: clamp(45px, 4vw, 120px);
   line-height: 0.88;
   font-weight: 700;
   letter-spacing: 0.1em;
+  transform: translate(-12px, 0px)
 }
 
 .socials {
-  margin-top: clamp(60px, 8vw, 110px);
-
+  margin-top: clamp(15px, 10vw, 10000px);
+transform: translate(0px, -20px);
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 80px;
 }
 
 .socials a {
-  min-width: 220px;
-  padding: 20px 24px;
+  min-width: 22s0px;
+  padding: 10px 30px;
 
-  border: 1px solid var(--line);
+  border: 3px solid var(--line);
 
-  font-size: 18px;
-  letter-spacing: 0;
+  font-size: 20px;
+  letter-spacing: 2px;
 
   transition:
     background 0.2s,
@@ -1031,7 +1077,6 @@ footer {
   padding-top: clamp(80px, 10vw, 150px);
   padding-bottom: 28px;
 
-  border-top: 1px solid var(--line);
 }
 
 .footer-mark-wrap {
@@ -1055,20 +1100,21 @@ footer {
   height: auto;
 
   transform: translate(-50%, -50%);
+
 }
 
 .footer-bottom {
-  margin-top: clamp(60px, 8vw, 110px);
+  margin-top: clamp(60px, 12vw, 1100px);
   padding-top: 24px;
 
   display: flex;
   justify-content: space-between;
 
-  border-top: 1px solid var(--line);
-  color: var(--grey);
+  border-top: 1px var(--line);
+  color: var(--black);
 
   font-size: 18px;
-  letter-spacing: 0;
+  letter-spacing: 2px;
 }
 
 
