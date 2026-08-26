@@ -7,7 +7,7 @@
 
     <title>BUTZEN — From Deep to Peak</title>
 
-    <link rel="stylesheet" href="style.css?v=d3278b4">
+    <link rel="stylesheet" href="style.css?v=shop1">
 </head>
 
 <body>
@@ -66,41 +66,36 @@
         <div class="products">
 
             <article class="product">
-
-                <div class="product-image">
-                    REGULAR
+                <div class="product-image">REGULAR</div>
+                <div class="product-info">
+                    <div>
+                        <h3>REGULAR TEE</h3>
+                        <p>01 / BUTZEN · 39,00 €</p>
+                    </div>
+                    <button class="buy-button" type="button" data-product="REGULAR TEE" data-price="39,00 €">COMPRAR ↗</button>
                 </div>
-
-                <h3>REGULAR TEE</h3>
-
-                <p>01 / BUTZEN</p>
-
             </article>
 
-
             <article class="product">
-
-                <div class="product-image">
-                    CROPPED
+                <div class="product-image">CROPPED</div>
+                <div class="product-info">
+                    <div>
+                        <h3>CROPPED TEE</h3>
+                        <p>02 / BUTZEN · 39,00 €</p>
+                    </div>
+                    <button class="buy-button" type="button" data-product="CROPPED TEE" data-price="39,00 €">COMPRAR ↗</button>
                 </div>
-
-                <h3>CROPPED TEE</h3>
-
-                <p>02 / BUTZEN</p>
-
             </article>
 
-
             <article class="product">
-
-                <div class="product-image">
-                    OVERSIZED
+                <div class="product-image">OVERSIZED</div>
+                <div class="product-info">
+                    <div>
+                        <h3>OVERSIZED TEE</h3>
+                        <p>03 / BUTZEN · 45,00 €</p>
+                    </div>
+                    <button class="buy-button" type="button" data-product="OVERSIZED TEE" data-price="45,00 €">COMPRAR ↗</button>
                 </div>
-
-                <h3>OVERSIZED TEE</h3>
-
-                <p>03 / BUTZEN</p>
-
             </article>
 
         </div>
@@ -162,6 +157,36 @@
     </section>
 
 
+    <dialog class="product-modal" id="product-modal">
+        <form class="product-panel" id="product-form">
+            <button class="modal-close" type="button" aria-label="Cerrar">×</button>
+            <p class="modal-kicker">BUTZEN / COLLECTION 001</p>
+            <h2 id="modal-product-name">REGULAR TEE</h2>
+            <p class="modal-price" id="modal-product-price">39,00 €</p>
+
+            <fieldset>
+                <legend>SELECCIONA TU TALLA</legend>
+                <div class="size-grid">
+                    <label><input type="radio" name="size" value="XS"><span>XS</span></label>
+                    <label><input type="radio" name="size" value="S"><span>S</span></label>
+                    <label><input type="radio" name="size" value="M"><span>M</span></label>
+                    <label><input type="radio" name="size" value="L"><span>L</span></label>
+                    <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+                </div>
+            </fieldset>
+
+            <label class="quantity-label" for="quantity">CANTIDAD</label>
+            <select id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <button class="add-to-cart" type="submit">AÑADIR AL CARRITO</button>
+            <p class="product-feedback" id="product-feedback" aria-live="polite"></p>
+        </form>
+    </dialog>
+
     <!-- FOOTER -->
 
     <footer>
@@ -180,7 +205,8 @@
 
     </footer>
 
-    <!-- deployment refresh 125f068 -->
+    <script src="script.js?v=shop1"></script>
+    <!-- deployment refresh shop1 -->
 </body>
 
 </html>
