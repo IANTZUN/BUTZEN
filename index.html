@@ -1,210 +1,761 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
+
+    <!-- =====================================================
+         1. CONFIGURACIÓN DE LA PÁGINA
+    ====================================================== -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="BUTZEN — From Deep to Peak. Apparel, goods and community."
+    >
 
     <title>BUTZEN — From Deep to Peak</title>
 
-    <link rel="stylesheet" href="style.css?v=shop1">
+    <!-- Archivo de estilos -->
+
+    <link rel="stylesheet" href="style.css?v=clean1">
+
 </head>
+
 
 <body>
 
-    <!-- NAVEGACIÓN -->
+
+    <!-- =====================================================
+         2. BARRA DE NAVEGACIÓN
+         Izquierda: BUTZEN
+         Centro: CAPSULE, STORY y CONTACT
+         Derecha: usuario y carrito
+    ====================================================== -->
 
     <header class="navbar">
 
-        <a href="#" class="brand">BUTZEN</a>
+        <!-- BUTZEN A LA IZQUIERDA -->
 
-        <nav>
-            <a href="#capsule">CAPSULE</a>
-            <a href="#story">STORY</a>
-            <a href="#contact">CONTACT</a>
+        <a href="#home" class="brand">
+            BUTZEN
+        </a>
+
+
+        <!-- CATEGORÍAS CENTRALES -->
+
+        <nav class="main-nav" aria-label="Navegación principal">
+
+            <a href="#capsule">
+                CAPSULE
+            </a>
+
+            <a href="#story">
+                STORY
+            </a>
+
+            <a href="#contact">
+                CONTACT
+            </a>
+
         </nav>
+
+
+        <!-- ICONOS DE LA DERECHA -->
+
+        <div class="nav-actions">
+
+
+            <!-- USUARIO -->
+
+            <a
+                href="#"
+                class="account-link"
+                aria-label="Iniciar sesión"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <circle cx="12" cy="8" r="4"></circle>
+
+                    <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path>
+                </svg>
+
+            </a>
+
+
+            <!-- CARRITO -->
+
+            <button
+                class="cart-button"
+                type="button"
+                aria-label="Abrir carrito"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L21 7H6"></path>
+
+                    <circle cx="10" cy="20" r="1"></circle>
+
+                    <circle cx="18" cy="20" r="1"></circle>
+                </svg>
+
+                <!-- Número de productos -->
+
+                <span class="cart-count">
+                    0
+                </span>
+
+            </button>
+
+        </div>
 
     </header>
 
 
-    <!-- PORTADA -->
+    <!-- =====================================================
+         3. PANTALLA INICIAL
+         Logo, BUTZEN, eslogan y enlace a CAPSULE
+    ====================================================== -->
 
-    <section class="hero">
+    <main>
 
-        <div class="hero-content">
 
-            <svg class="hero-lockup" viewBox="0 0 1000 560" role="img" aria-label="BUTZEN">
-                <image href="butzen-logo-original.png?v=5701954" x="190" y="-35" width="720" height="720"></image>
-                <text x="500" y="490" text-anchor="middle">BUTZEN</text>
-            </svg>
+        <section class="hero" id="home">
 
-            <h1 class="sr-only">BUTZEN</h1>
+            <div class="hero-content">
 
-            <h2>FROM DEEP TO PEAK</h2>
 
-        </div>
-          <a href="#capsule" class="explore">
-                EXPLORE ↓   </a>
-    </section>
+                <!-- LOGO Y TÍTULO BUTZEN -->
 
-    <!-- CAPSULE -->
+                <svg
+                    class="hero-lockup"
+                    viewBox="0 0 1000 560"
+                    role="img"
+                    aria-label="BUTZEN"
+                >
 
-    <section id="capsule" class="capsule">
+                    <!-- LOGO ROJO -->
 
-        <p class="section-number">001</p>
+                    <image
+                        href="butzen-logo-original.png?v=5701954"
+                        x="-15"
+                        y="-150"
+                        width="1020"
+                        height="1020"
+                    ></image>
 
-        <h2>CAPSULE 001</h2>
 
-        <p class="subtitle">
-            SLOW DAYS, WILD WAYS
-        </p>
+                    <!-- TÍTULO BUTZEN -->
 
-</a>
-        <div class="products">
+                    <text
+                        x="500"
+                        y="440"
+                        text-anchor="middle"
+                    >
+                        BUTZEN
+                    </text>
 
-            <article class="product">
-                <div class="product-image">REGULAR</div>
-                <div class="product-info">
-                    <div>
-                        <h3>REGULAR TEE</h3>
-                        <p>01 / BUTZEN · PRECIO POR DEFINIR</p>
+                </svg>
+
+
+                <!-- TÍTULO OCULTO PARA GOOGLE Y ACCESIBILIDAD -->
+
+                <h1 class="sr-only">
+                    BUTZEN
+                </h1>
+
+
+                <!-- ESLOGAN -->
+
+                <h2>
+                    FROM DEEP TO PEAK
+                </h2>
+
+            </div>
+
+
+            <!-- ENLACE A LA SIGUIENTE PANTALLA -->
+
+            <a href="#capsule" class="explore">
+                CAPSULE ↓
+            </a>
+
+        </section>
+
+
+        <!-- =================================================
+             4. PANTALLA CAPSULE
+             Título y tres productos
+        ================================================== -->
+
+        <section id="capsule" class="collection">
+
+
+            <!-- CABECERA DE CAPSULE -->
+
+            <p class="section-number">
+                PAGE_01
+            </p>
+
+            <h2>
+                CAPSULE 001
+            </h2>
+
+            <p class="subtitle">
+                SLOW DAYS, WILD WAYS
+            </p>
+
+
+            <!-- PRODUCTOS -->
+
+            <div class="products">
+
+
+                <!-- PRODUCTO 1: REGULAR -->
+
+                <article class="product">
+
+                    <div class="product-image">
+                        REGULAR
                     </div>
-                    <button class="buy-button" type="button" data-product="REGULAR TEE" data-price="PRECIO POR DEFINIR">COMPRAR ↗</button>
-                </div>
-            </article>
 
-            <article class="product">
-                <div class="product-image">CROPPED</div>
-                <div class="product-info">
-                    <div>
-                        <h3>CROPPED TEE</h3>
-                        <p>02 / BUTZEN · PRECIO POR DEFINIR</p>
+                    <div class="product-info">
+
+                        <div>
+
+                            <h3>
+                                REGULAR
+                            </h3>
+
+                            <p>
+                                001 / BUTZEN · PRECIO TBD
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="buy-button"
+                            type="button"
+                            data-product="REGULAR"
+                            data-price="PRECIO TBD"
+                        >
+                            COMPRAR ↗
+                        </button>
+
                     </div>
-                    <button class="buy-button" type="button" data-product="CROPPED TEE" data-price="PRECIO POR DEFINIR">COMPRAR ↗</button>
-                </div>
-            </article>
 
-            <article class="product">
-                <div class="product-image">OVERSIZED</div>
-                <div class="product-info">
-                    <div>
-                        <h3>OVERSIZED TEE</h3>
-                        <p>03 / BUTZEN · PRECIO POR DEFINIR</p>
+                </article>
+
+
+                <!-- PRODUCTO 2: BOXY -->
+
+                <article class="product">
+
+                    <div class="product-image">
+                        BOXY
                     </div>
-                    <button class="buy-button" type="button" data-product="OVERSIZED TEE" data-price="PRECIO POR DEFINIR">COMPRAR ↗</button>
-                </div>
-            </article>
 
-        </div>
-<a href="#story" class="collection-next">
-    OUR STORY ↓
-    </section>
+                    <div class="product-info">
 
+                        <div>
 
-    <!-- MANIFIESTO -->
+                            <h3>
+                                BOXY
+                            </h3>
 
-    <section class="manifesto">
+                            <p>
+                                001 / BUTZEN · PRECIO TBD
+                            </p>
 
-        <p>OCEAN / STREET / MOUNTAIN</p>
+                        </div>
 
-        <h2>
-            FROM DEEP<br>
-            TO PEAK
-        </h2>
+                        <button
+                            class="buy-button"
+                            type="button"
+                            data-product="BOXY"
+                            data-price="PRECIO TBD"
+                        >
+                            COMPRAR ↗
+                        </button>
 
-    </section>
+                    </div>
 
-
-    <!-- HISTORIA -->
-
-    <section id="story" class="story">
-
-        <p class="section-number">002</p>
-
-        <h2>OUR STORY</h2>
-
-        <p class="story-text">
-            BUTZEN was born between the ocean and the mountains.
-            Inspired by surf, snow, skate and the freedom of being outside.
-        </p>
-
-        <p class="story-text">
-            No rules. No destination.
-            Just find your line.
-        </p>
-
-    </section>
+                </article>
 
 
-    <!-- CONTACTO -->
+                <!-- PRODUCTO 3: OVERSIZED -->
 
-    <section id="contact" class="contact">
+                <article class="product">
 
-        <p class="section-number">003</p>
+                    <div class="product-image">
+                        OVERSIZED
+                    </div>
 
-        <h2>STAY OUTSIDE.</h2>
+                    <div class="product-info">
 
-        <div class="socials">
+                        <div>
 
-            <a href="https://www.instagram.com/ivanantolinn/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
-            <a href="#">TIKTOK ↗</a>
-            <a href="mailto:ivanantolinn@gmail.com?subject=BUTZEN">EMAIL ↗</a>
+                            <h3>
+                                OVERSIZED
+                            </h3>
 
-        </div>
+                            <p>
+                                001 / BUTZEN · PRECIO TBD
+                            </p>
 
-    </section>
+                        </div>
+
+                        <button
+                            class="buy-button"
+                            type="button"
+                            data-product="OVERSIZED"
+                            data-price="PRECIO TBD"
+                        >
+                            COMPRAR ↗
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
 
 
-    <dialog class="product-modal" id="product-modal">
-        <form class="product-panel" id="product-form">
-            <button class="modal-close" type="button" aria-label="Cerrar">×</button>
-            <p class="modal-kicker">BUTZEN / COLLECTION 001</p>
-            <h2 id="modal-product-name">REGULAR TEE</h2>
-            <p class="modal-price" id="modal-product-price">39,00 €</p>
+            <!-- ENLACE A OUR STORY -->
+
+            <a href="#story" class="collection-next">
+                OUR STORY ↓
+            </a>
+
+        </section>
+
+
+        <!-- =================================================
+             5. PANTALLA MANIFESTO
+        ================================================== -->
+
+        <section class="manifesto">
+
+            <p>
+                OCEAN / STREET / MOUNTAIN
+            </p>
+
+            <h2>
+                FROM DEEP
+                <br>
+                TO PEAK
+            </h2>
+
+        </section>
+
+
+        <!-- =================================================
+             6. PANTALLA OUR STORY
+        ================================================== -->
+
+        <section id="story" class="story">
+
+
+            <!-- CABECERA -->
+
+            <p class="section-number">
+                PAGE_02
+            </p>
+
+            <h2>
+                OUR STORY
+            </h2>
+
+
+            <!-- HISTORIA PRINCIPAL -->
+
+            <p class="story-text">
+
+                BORN BETWEEN CUENCA AND CANTABRIA, BUTZEN IS OUR
+                WAY OF CHOOSING A WILDER PATH — ONE SHAPED BY
+                THE OCEAN, THE MOUNTAINS AND THE FREEDOM TO LIVE
+                BEYOND THE EXPECTED.
+
+            </p>
+
+
+            <!-- FRASE FINAL -->
+
+            <p class="story-text">
+
+                NO RULES. NO DESTINATION.
+                JUST FIND YOUR LINE.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             7. PANTALLA CONTACT
+        ================================================== -->
+
+        <section id="contact" class="contact">
+
+
+            <!-- CABECERA -->
+
+            <p class="section-number">
+                PAGE_03
+            </p>
+
+            <h2>
+                CONTACT
+            </h2>
+
+
+            <!-- REDES SOCIALES Y CORREO -->
+
+            <div class="socials">
+
+
+                <!-- INSTAGRAM -->
+
+                <a
+                    href="https://www.instagram.com/ivanantolinn/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    INSTAGRAM ↗
+                </a>
+
+
+                <!-- TIKTOK -->
+
+                <a href="#">
+                    TIKTOK ↗
+                </a>
+
+
+                <!-- CORREO -->
+
+                <a href="mailto:ivanantolinn@gmail.com?subject=BUTZEN">
+                    EMAIL ↗
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         8. VENTANA DE PRODUCTO
+         Aparece al pulsar COMPRAR
+    ====================================================== -->
+
+    <dialog
+        class="product-modal"
+        id="product-modal"
+    >
+
+        <form
+            class="product-panel"
+            id="product-form"
+        >
+
+
+            <!-- CERRAR VENTANA -->
+
+            <button
+                class="modal-close"
+                type="button"
+                aria-label="Cerrar producto"
+            >
+                ×
+            </button>
+
+
+            <!-- INFORMACIÓN DEL PRODUCTO -->
+
+            <p class="modal-kicker">
+                BUTZEN / CAPSULE 001
+            </p>
+
+            <h2 id="modal-product-name">
+                REGULAR
+            </h2>
+
+            <p
+                class="modal-price"
+                id="modal-product-price"
+            >
+                PRECIO TBD
+            </p>
+
+
+            <!-- SELECTOR DE TALLA -->
 
             <fieldset>
-                <legend>SELECCIONA TU TALLA</legend>
+
+                <legend>
+                    SELECCIONA TU TALLA
+                </legend>
+
                 <div class="size-grid">
-                    <label><input type="radio" name="size" value="XS"><span>XS</span></label>
-                    <label><input type="radio" name="size" value="S"><span>S</span></label>
-                    <label><input type="radio" name="size" value="M"><span>M</span></label>
-                    <label><input type="radio" name="size" value="L"><span>L</span></label>
-                    <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="size"
+                            value="XS"
+                        >
+
+                        <span>
+                            XS
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="size"
+                            value="S"
+                        >
+
+                        <span>
+                            S
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="size"
+                            value="M"
+                        >
+
+                        <span>
+                            M
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="size"
+                            value="L"
+                        >
+
+                        <span>
+                            L
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="size"
+                            value="XL"
+                        >
+
+                        <span>
+                            XL
+                        </span>
+
+                    </label>
+
                 </div>
+
             </fieldset>
 
-            <label class="quantity-label" for="quantity">CANTIDAD</label>
-            <select id="quantity" name="quantity">
+
+            <!-- SELECTOR DE CANTIDAD -->
+
+            <label
+                class="quantity-label"
+                for="quantity"
+            >
+                CANTIDAD
+            </label>
+
+            <select
+                id="quantity"
+                name="quantity"
+            >
+
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+
             </select>
 
-            <button class="add-to-cart" type="submit">AÑADIR AL CARRITO</button>
-            <p class="product-feedback" id="product-feedback" aria-live="polite"></p>
+
+            <!-- AÑADIR AL CARRITO -->
+
+            <button
+                class="add-to-cart"
+                type="submit"
+            >
+                AÑADIR AL CARRITO
+            </button>
+
+
+            <!-- MENSAJES DE ERROR O CONFIRMACIÓN -->
+
+            <p
+                class="product-feedback"
+                id="product-feedback"
+                aria-live="polite"
+            ></p>
+
         </form>
+
     </dialog>
 
-    <!-- FOOTER -->
+
+    <!-- =====================================================
+         9. VENTANA DEL CARRITO
+    ====================================================== -->
+
+    <dialog
+        class="cart-modal"
+        id="cart-modal"
+    >
+
+        <div class="cart-panel">
+
+
+            <!-- CERRAR CARRITO -->
+
+            <button
+                class="modal-close cart-close"
+                type="button"
+                aria-label="Cerrar carrito"
+            >
+                ×
+            </button>
+
+
+            <!-- CABECERA DEL CARRITO -->
+
+            <p class="modal-kicker">
+                BUTZEN / YOUR CART
+            </p>
+
+            <h2>
+                PRODUCTS
+            </h2>
+
+
+            <!-- PRODUCTOS DEL CARRITO -->
+
+            <div
+                class="cart-items"
+                aria-live="polite"
+            >
+
+                <p class="cart-empty">
+                    TU CARRITO ESTÁ VACÍO.
+                </p>
+
+            </div>
+
+
+            <!-- FINALIZAR COMPRA -->
+
+            <button
+                class="checkout-button"
+                type="button"
+            >
+                FINALIZAR COMPRA ↗
+            </button>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- =====================================================
+         10. FOOTER
+         Imagen final y textos inferiores
+    ====================================================== -->
 
     <footer>
 
+
+        <!-- IMAGEN FINAL DE BUTZEN -->
+
         <div class="footer-mark-wrap">
-            <img class="footer-mark" src="butzen-footer-lockup.png?v=brand2" alt="BUTZEN — From Deep to Peak — Apparel, Goods, Community">
+
+            <img
+                class="footer-mark"
+                src="butzen-footer-lockup.png?v=brand2"
+                alt="BUTZEN — From Deep to Peak — Apparel, Goods, Community"
+            >
+
         </div>
+
+
+        <!-- TEXTOS INFERIORES -->
 
         <div class="footer-bottom">
 
-            <p>© 2026 BUTZEN</p>
+            <p>
+                BUTZEN
+            </p>
 
-            <p>FROM DEEP TO PEAK</p>
+            <p>
+                APPAREL · GOODS · COMMUNITY
+            </p>
+
+            <p>
+                FROM DEEP TO PEAK
+            </p>
 
         </div>
 
     </footer>
 
+
+    <!-- =====================================================
+         11. ARCHIVO JAVASCRIPT
+         Controla productos, ventanas y carrito
+    ====================================================== -->
+
     <script src="script.js?v=shop1"></script>
-    <!-- deployment refresh shop1 -->
+
+
 </body>
 
 </html>
