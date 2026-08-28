@@ -24,7 +24,7 @@
 
     <!-- Archivo de estilos -->
 
-    <link rel="stylesheet" href="style.css?v=clean1">
+    <link rel="stylesheet" href="style.css?v=product2">
 
 </head>
 
@@ -74,10 +74,10 @@
 
             <!-- USUARIO -->
 
-            <a
-                href="#"
+            <button
+                type="button"
                 class="account-link"
-                aria-label="Iniciar sesión"
+                aria-label="Acceso anticipado"
             >
 
                 <svg
@@ -89,7 +89,7 @@
                     <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path>
                 </svg>
 
-            </a>
+            </button>
 
 
             <!-- CARRITO -->
@@ -98,6 +98,7 @@
                 class="cart-button"
                 type="button"
                 aria-label="Abrir carrito"
+                hidden
             >
 
                 <svg
@@ -189,7 +190,7 @@
             <!-- ENLACE A LA SIGUIENTE PANTALLA -->
 
             <a href="#capsule" class="explore">
-                CAPSULE ↓
+                <span>CAPSULE →</span>
             </a>
 
         </section>
@@ -227,8 +228,13 @@
 
                 <article class="product">
 
-                    <div class="product-image">
-                        REGULAR
+                    <div class="product-image product-image--mockup">
+                        <img
+                            src="butzen-regular-white-v1.png"
+                            alt="Camiseta blanca regular BUTZEN con logo bordado y etiqueta interior"
+                            loading="lazy"
+                            decoding="async"
+                        >
                     </div>
 
                     <div class="product-info">
@@ -246,12 +252,11 @@
                         </div>
 
                         <button
-                            class="buy-button"
+                            class="buy-button buy-button--coming-soon"
                             type="button"
-                            data-product="REGULAR"
-                            data-price="PRECIO TBD"
+                            disabled
                         >
-                            COMPRAR ↗
+                            PRÓXIMAMENTE
                         </button>
 
                     </div>
@@ -263,8 +268,13 @@
 
                 <article class="product">
 
-                    <div class="product-image">
-                        BOXY
+                    <div class="product-image product-image--mockup">
+                        <img
+                            src="butzen-boxy-white-v2.png"
+                            alt="Camiseta blanca boxy BUTZEN con logo bordado y etiqueta interior"
+                            loading="lazy"
+                            decoding="async"
+                        >
                     </div>
 
                     <div class="product-info">
@@ -282,12 +292,11 @@
                         </div>
 
                         <button
-                            class="buy-button"
+                            class="buy-button buy-button--coming-soon"
                             type="button"
-                            data-product="BOXY"
-                            data-price="PRECIO TBD"
+                            disabled
                         >
-                            COMPRAR ↗
+                            PRÓXIMAMENTE
                         </button>
 
                     </div>
@@ -299,8 +308,13 @@
 
                 <article class="product">
 
-                    <div class="product-image">
-                        OVERSIZED
+                    <div class="product-image product-image--mockup">
+                        <img
+                            src="butzen-oversized-white-v1.png"
+                            alt="Camiseta blanca oversized BUTZEN con logo bordado y etiqueta interior"
+                            loading="lazy"
+                            decoding="async"
+                        >
                     </div>
 
                     <div class="product-info">
@@ -318,12 +332,11 @@
                         </div>
 
                         <button
-                            class="buy-button"
+                            class="buy-button buy-button--coming-soon"
                             type="button"
-                            data-product="OVERSIZED"
-                            data-price="PRECIO TBD"
+                            disabled
                         >
-                            COMPRAR ↗
+                            PRÓXIMAMENTE
                         </button>
 
                     </div>
@@ -336,7 +349,7 @@
             <!-- ENLACE A OUR STORY -->
 
             <a href="#story" class="collection-next">
-                OUR STORY ↓
+                OUR STORY →
             </a>
 
         </section>
@@ -453,6 +466,33 @@
             </div>
 
         </section>
+
+
+        <!-- =================================================
+             8. PANTALLA FINAL
+        ================================================== -->
+
+        <footer>
+
+            <div class="footer-mark-wrap">
+
+                <img
+                    class="footer-mark"
+                    src="butzen-footer-lockup.png?v=brand2"
+                    alt="BUTZEN — From Deep to Peak — Apparel, Goods, Community"
+                >
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>BUTZEN</p>
+
+                <p>FROM DEEP TO PEAK</p>
+
+            </div>
+
+        </footer>
 
 
     </main>
@@ -645,6 +685,121 @@
 
 
     <!-- =====================================================
+         10. ACCESO ANTICIPADO
+    ====================================================== -->
+
+    <dialog
+        class="early-access-modal"
+        id="early-access-modal"
+    >
+
+        <form
+            class="early-access-panel"
+            id="early-access-form"
+        >
+
+            <div class="early-access-visual" aria-hidden="true">
+                <span class="early-access-index">FROM DEEP</span>
+                <span class="early-access-drop">OCEAN / STREET / MOUNTAIN</span>
+
+                <div class="early-access-landscape">
+                    <svg viewBox="0 0 420 500">
+                        <path class="landscape-sun" d="M298 58a54 54 0 1 1-108 0 54 54 0 0 1 108 0Z"/>
+                        <path class="landscape-mountain-back" d="M-20 294 93 162l55 61 58-108 96 126 48-52 90 105Z"/>
+                        <path class="landscape-mountain-front" d="M-30 328 78 225l54 48 82-106 73 92 50-38 113 107Z"/>
+                        <path class="landscape-route" d="M72 337c43-67 121-34 151-91 24-45-11-71 28-107"/>
+                        <circle class="landscape-route-point" cx="72" cy="337" r="7"/>
+                        <circle class="landscape-route-point" cx="251" cy="139" r="7"/>
+                        <path class="landscape-wave" d="M-10 370c48-38 86-38 134 0s86 38 134 0 86-38 172 0"/>
+                        <path class="landscape-wave landscape-wave--two" d="M-10 405c48-38 86-38 134 0s86 38 134 0 86-38 172 0"/>
+                        <path class="landscape-wave landscape-wave--three" d="M-10 440c48-38 86-38 134 0s86 38 134 0 86-38 172 0"/>
+                    </svg>
+
+                    <span class="early-access-landscape-title">
+                        DEEP<br>TO<br>PEAK
+                    </span>
+                </div>
+
+                <span class="early-access-activities">
+                    <i>SURF</i><i>SKATE</i><i>TREK</i>
+                </span>
+                <span class="early-access-coordinate">CUENCA ↔ CANTABRIA / TO PEAK</span>
+            </div>
+
+            <button
+                class="modal-close early-access-close"
+                type="button"
+                aria-label="Cerrar acceso anticipado"
+            >
+                ×
+            </button>
+
+            <div class="early-access-content">
+
+            <p class="modal-kicker">
+                BUTZEN / FIND YOUR LINE
+            </p>
+
+            <h2>JOIN THE WILD</h2>
+
+            <p class="early-access-copy">
+                PARA QUIENES ENCUENTRAN LIBERTAD ENTRE OLAS, ASFALTO,
+                SENDEROS Y CUMBRES. ENTRA EN LA COMUNIDAD BUTZEN.
+            </p>
+
+            <label for="early-access-name">
+                NOMBRE
+            </label>
+
+            <input
+                id="early-access-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                maxlength="80"
+                placeholder="TU NOMBRE"
+                required
+            >
+
+            <label for="early-access-email">
+                EMAIL
+            </label>
+
+            <input
+                id="early-access-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                maxlength="160"
+                placeholder="TU@EMAIL.COM"
+                required
+            >
+
+            <button
+                class="early-access-submit"
+                type="submit"
+            >
+                FIND YOUR LINE ↗
+            </button>
+
+            <p class="early-access-note">
+                PREVIEW LOCAL · TUS DATOS SOLO SE GUARDAN EN ESTE DISPOSITIVO.
+            </p>
+
+            <p
+                class="early-access-feedback"
+                id="early-access-feedback"
+                aria-live="polite"
+            ></p>
+
+            </div>
+
+        </form>
+
+    </dialog>
+
+
+    <!-- =====================================================
          9. VENTANA DEL CARRITO
     ====================================================== -->
 
@@ -707,49 +862,11 @@
 
 
     <!-- =====================================================
-         10. FOOTER
-         Imagen final y textos inferiores
-    ====================================================== -->
-
-    <footer>
-
-
-        <!-- IMAGEN FINAL DE BUTZEN -->
-
-        <div class="footer-mark-wrap">
-
-            <img
-                class="footer-mark"
-                src="butzen-footer-lockup.png?v=brand2"
-                alt="BUTZEN — From Deep to Peak — Apparel, Goods, Community"
-            >
-
-        </div>
-
-
-        <!-- TEXTOS INFERIORES -->
-
-        <div class="footer-bottom">
-
-            <p>
-                BUTZEN
-            </p>
-
-            <p>
-                FROM DEEP TO PEAK
-            </p>
-
-        </div>
-
-    </footer>
-
-
-    <!-- =====================================================
          11. ARCHIVO JAVASCRIPT
          Controla productos, ventanas y carrito
     ====================================================== -->
 
-    <script src="script.js?v=shop1"></script>
+    <script src="script.js?v=depth1"></script>
 
 
 </body>
